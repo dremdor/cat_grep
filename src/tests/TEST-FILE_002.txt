@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+#include "process.h"
+#include "set_options.h"
+
+int main(int argc, char **argv) {
+  int options[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+  // 5 - illegal option ; 6 - argv id inputs start
+  // 0 - b ; 1 - e ; 2 - n ; 3 - s ; 4 - t; 7 - v;
+
+  set_options(options, argc, argv);
+
+  if (options[5] == 0) {
+    if (options[6] == -1) {
+      printf("%s: Error.\n", argv[0]);
+      printf("usage: %s [-benstuv] [file ...]\n", argv[0]);
+    } else {
+      for (int i = options[6]; i < argc; i++) {
+        FILE *f;
+        if ((f = fopen(argv[i], "r")) != NULL) {
+          process(f, options);
+
+          fclose(f);
+          // printf("file close");
+        } else {
+          printf("%s: %s: Error. No such file or directory.\n", argv[0],
+                 argv[i]);
+          printf("usage: %s [-benstuv] [file ...]\n", argv[0]);
+        }
+      }
+    }
+
+  } else {
+    printf("%s: Error.\n", argv[0]);
+    printf("usage: %s [-benstuv] [file ...]\n", argv[0]);
+  }
+
+  // for (int i = 0; i < 7; i++) {
+  //     printf("%d ", options[i]);
+  // }
+  return 0;
+}

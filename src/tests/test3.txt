@@ -1,0 +1,4 @@
+Here, we have both letters and numbers.
+Some numbers: 12345, 67890.
+Some numbers: 132345, 67890.
+Some letters: ABCDE, FGHIJ.

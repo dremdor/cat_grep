@@ -1,0 +1,20 @@
+This is a simple text file to test the functionality of cat and grep.
+It contains several lines with different text.
+The first line.
+The second line.
+The third line.
+
+
+
+uy
+
+
+
+ello
+
+
+
+
+
+
+
