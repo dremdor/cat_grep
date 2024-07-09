@@ -1,4 +1,0 @@
-Here are lines with different cases.
-Lowercase line.
-UPPERCASE LINE.
-Mixed cAsE.

@@ -1,3 +1,0 @@
-This text contains special characters: @, #, $, %.
-There are also some punctuation marks: !, ?, :.
-And even quotes: " ".
